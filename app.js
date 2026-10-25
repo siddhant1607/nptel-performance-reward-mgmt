@@ -8,6 +8,7 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 // Week topic summaries for the cards
 const WEEK_TOPICS = {
+    0: 'Prerequisite & Foundational Concepts',
     1: 'Introduction to Performance & Reward Systems',
     2: 'Strategic Importance & Strategic Planning',
     3: 'Defining & Measuring Performance Approaches',
@@ -100,7 +101,7 @@ function renderHome(container) {
     container.innerHTML = `
         <div class="home-hero">
             <h1>Performance and Reward Management</h1>
-            <p>NPTEL Course Quiz Practice — Test your knowledge across all 12 weeks of the course</p>
+            <p>NPTEL Course Quiz Practice — Test your knowledge across all 13 assignments (Weeks 0–12)</p>
             <div class="home-stats">
                 <div class="stat-badge">
                     <span class="stat-num">${totalQ}</span> Questions
@@ -221,7 +222,7 @@ function renderQuizUI(container, title, weekOrAll) {
         </div>
         <div class="question-dots">${dotsHTML}</div>
         <div class="question-card">
-            <div class="question-number">Question ${s.current + 1} of ${total}${q.weekNum ? ` · Week ${q.weekNum}` : ''}</div>
+            <div class="question-number">Question ${s.current + 1} of ${total}${(q.weekNum !== undefined && q.weekNum !== null) ? ` · Week ${q.weekNum}` : ''}</div>
             <div class="question-text">${q.question}</div>
             <div class="options-list">${optionsHTML}</div>
             ${s.answered[s.current] && q.reference ? `<div class="question-reference">📎 ${q.reference}</div>` : ''}
@@ -342,14 +343,16 @@ function renderStudy(container, selectedWeek) {
     document.querySelector('[data-nav="study"]').classList.add('active');
     
     const sortedKeys = Object.keys(DATA).sort((a, b) => DATA[a].weekNum - DATA[b].weekNum);
-    const activeWeek = selectedWeek || DATA[sortedKeys[0]].weekNum;
+    const isAll = (selectedWeek === null || selectedWeek === undefined || isNaN(selectedWeek));
+    const activeWeek = !isAll ? selectedWeek : DATA[sortedKeys[0]].weekNum;
+    const totalQ = Object.values(DATA).reduce((sum, w) => sum + w.questions.length, 0);
     
     // Tabs
     let tabsHTML = '';
-    tabsHTML += `<button class="study-tab ${!selectedWeek ? 'active' : ''}" onclick="location.hash='#/study'">All</button>`;
+    tabsHTML += `<button class="study-tab ${isAll ? 'active' : ''}" onclick="location.hash='#/study'">All</button>`;
     for (const key of sortedKeys) {
         const w = DATA[key];
-        const isActive = w.weekNum === activeWeek && selectedWeek;
+        const isActive = !isAll && w.weekNum === activeWeek;
         tabsHTML += `<button class="study-tab ${isActive ? 'active' : ''}" onclick="location.hash='#/study/${w.weekNum}'">Week ${w.weekNum}</button>`;
     }
 
@@ -357,7 +360,7 @@ function renderStudy(container, selectedWeek) {
     let questionsHTML = '';
     let globalIdx = 0;
     
-    const weeksToShow = selectedWeek ? [`week${selectedWeek}`] : sortedKeys;
+    const weeksToShow = !isAll ? [`week${selectedWeek}`] : sortedKeys;
     
     for (const key of weeksToShow) {
         const w = DATA[key];
@@ -389,9 +392,9 @@ function renderStudy(container, selectedWeek) {
         }
     }
 
-    const subtitle = selectedWeek ? 
+    const subtitle = !isAll ? 
         `${WEEK_TOPICS[selectedWeek] || 'Assignment ' + selectedWeek} — ${DATA['week' + selectedWeek]?.questions.length || 0} questions` :
-        `All 120 questions with correct answers highlighted`;
+        `All ${totalQ} questions with correct answers highlighted`;
 
     container.innerHTML = `
         <div class="study-header">

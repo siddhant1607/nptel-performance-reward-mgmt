@@ -1,4 +1,114 @@
 {
+  "week0": {
+    "title": "Assignment 0",
+    "weekNum": 0,
+    "questions": [
+      {
+        "question": "Performance management aims at aligning the goals of an individual with the ________.",
+        "options": [
+          "Team goals, an individual is working in",
+          "Strategic goals of an organization",
+          "Career goals of an individual",
+          "None of the above"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "State whether the following is True or False:\n\nPerformance management occurs once or twice a year.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "While the system of performance management is owned by ________, the system of performance appraisal is owned by ________.",
+        "options": [
+          "HR Department, Line Managers",
+          "Line Managers, HR Department",
+          "HR Department, Development managers",
+          "Development managers, Line Managers"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "Which of the mentioned below is misquoted objective of Performance Management?\n\n1. Motivating and rewarding employees but not empowering (Statement 1)\n2. Making sure employees not only do right things but also do things right (Statement 2)\n3. Managing and improving performance (Statement 3)\n4. Best and judicious use of resources (Statement 4)",
+        "options": [
+          "Statement 1 is misquoted",
+          "Statement 2 is misquoted",
+          "Statement 3 is misquoted",
+          "None of the above"
+        ],
+        "correct": 0,
+        "correctLetter": "A"
+      },
+      {
+        "question": "An organization's strategic plan mainly comprises an organization's ________, which are further translated into goals and objectives.",
+        "options": [
+          "Vision and mission statements",
+          "Philosophy of survival",
+          "Plan of action",
+          "None of the above"
+        ],
+        "correct": 0,
+        "correctLetter": "A"
+      },
+      {
+        "question": "State whether the following is True or False:\n\nAs far as modern-day organizations are concerned rewards can only be monetary.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "________ occurs when an employee is rated on the basis of the first few interactions only, may be on the basis of initial interaction that took place at the beginning of the performance review.",
+        "options": [
+          "Recency error",
+          "Primacy error",
+          "Contrast error",
+          "None of the above"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "State whether the following is True or False:\n\nPerformance management shares no linkage with reward management. It is a stand-alone process in all possible ways.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      },
+      {
+        "question": "________ is for those people who basically do not have the benefit of pension after retirement from service.",
+        "options": [
+          "New Pension Scheme",
+          "INL Yojana",
+          "Modified Pension Scheme",
+          "None of the above"
+        ],
+        "correct": 0,
+        "correctLetter": "A"
+      },
+      {
+        "question": "________ benefits are provided to employees over and above their salaries.",
+        "options": [
+          "Non-fringe",
+          "Fringe",
+          "Add-on",
+          "All of the above"
+        ],
+        "correct": 1,
+        "correctLetter": "B"
+      }
+    ]
+  },
   "week1": {
     "title": "Assignment 1",
     "weekNum": 1,

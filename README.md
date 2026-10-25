@@ -4,11 +4,11 @@ An interactive web-based practice quiz and study platform for the NPTEL / SWAYAM
 
 ## 🚀 Features
 
-- **120 Curated Questions**: 10 questions per week covering all 12 weeks of assignments.
+- **130 Curated Questions**: 10 questions per assignment covering Week 0 (Prerequisites) through Week 12.
 - **Three Learning Modes**:
   - **Weekly Quizzes**: Practice specific weekly assignments with instant feedback, question dots navigation, and score summaries.
   - **Study Mode**: Browse all questions with correct answers highlighted for quick revision.
-  - **Practice All Mode**: Test your comprehensive knowledge across all 120 questions in a randomized sequence.
+  - **Practice All Mode**: Test your comprehensive knowledge across all 130 questions in a randomized sequence.
 - **Responsive & Modern UI**: Dark-themed, mobile-responsive layout designed for smooth navigation and study sessions.
 - **Zero Dependencies**: Pure HTML5, CSS3, and modern vanilla JavaScript with no build steps or heavy frameworks required.
 
@@ -16,6 +16,7 @@ An interactive web-based practice quiz and study platform for the NPTEL / SWAYAM
 
 | Week | Assignment | Topic | Questions |
 | :---: | :---: | :--- | :---: |
+| **Week 0** | Assignment 0 | Prerequisite & Foundational Concepts | 10 |
 | **Week 1** | Assignment 1 | Introduction to Performance & Reward Systems | 10 |
 | **Week 2** | Assignment 2 | Strategic Importance & Strategic Planning | 10 |
 | **Week 3** | Assignment 3 | Defining & Measuring Performance Approaches | 10 |
@@ -47,7 +48,7 @@ Then open `http://localhost:8000` in your web browser.
 ├── index.html            # Main Single Page Application shell
 ├── app.js                # Routing, quiz engine, state management & study mode
 ├── style.css             # Responsive dark theme styling
-├── questions_data.json   # 120 questions across 12 assignments with answers
+├── questions_data.json   # 130 questions across 13 assignments with answers
 ├── .gitignore            # Git ignore configuration
 └── README.md             # Project documentation
 ```
