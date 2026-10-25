@@ -1,5 +1,6 @@
 /* ============================================
-   MIPT Quiz App - JavaScript
+   PRM Quiz App - JavaScript
+   Performance and Reward Management
    ============================================ */
 
 let DATA = null;
@@ -7,18 +8,18 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 // Week topic summaries for the cards
 const WEEK_TOPICS = {
-    1: 'Raja Ram Mohan Roy & Introduction',
-    2: 'Rabindranath Tagore',
-    3: 'Sri Aurobindo',
-    4: 'Swami Vivekananda',
-    5: 'Mahatma Gandhi',
-    6: 'Muhammad Iqbal',
-    7: 'V.D. Savarkar',
-    8: 'Jawaharlal Nehru',
-    9: 'B.R. Ambedkar',
-    10: 'Ambedkar & Pandita Ramabai',
-    11: 'Ramabai & Ram Manohar Lohia',
-    12: 'Lohia & Revision'
+    1: 'Introduction to Performance & Reward Systems',
+    2: 'Strategic Importance & Strategic Planning',
+    3: 'Defining & Measuring Performance Approaches',
+    4: 'Implementing Performance Management Systems',
+    5: 'Employee Development, Skills & Team Rewards',
+    6: 'Reward Systems & Total Rewards Overview',
+    7: 'Linkage Between Performance and Rewards',
+    8: 'Job Evaluation, Pay Levels & Grade Structures',
+    9: 'Rewarding Special Groups',
+    10: 'Employee Benefits, Pension & Legal Context',
+    11: 'Pay Administration, Restructuring & Implementation',
+    12: 'Ethics, Challenges & Reward System Reviews'
 };
 
 // --- Data Loading ---
@@ -98,7 +99,7 @@ function renderHome(container) {
 
     container.innerHTML = `
         <div class="home-hero">
-            <h1>Modern Indian Political Thought</h1>
+            <h1>Performance and Reward Management</h1>
             <p>NPTEL Course Quiz Practice — Test your knowledge across all 12 weeks of the course</p>
             <div class="home-stats">
                 <div class="stat-badge">
